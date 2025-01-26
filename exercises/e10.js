@@ -6,10 +6,13 @@ import { data } from "../data/data";
 
 export function getAsteroidDataByName(data, asteroidName) {
   // Your code goes here...
+  const asteroids = data.asteroids;
+  return (
+    asteroids.find((asteroid) => asteroid.name === asteroidName) ||
+    null
+  );
 }
-
-
-
+//console.log(getAsteroidDataByName(data, "1 Ceres"));
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-10"
 // If the test has all tests passed, switch to the next exercise file
